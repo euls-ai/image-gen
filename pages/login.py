@@ -10,7 +10,10 @@ with st.form(key="login form"):
 if submitted:
     if u == st.secrets.u and p == st.secrets.p:
         with st.spinner(text="Retrieving credits..."):
-            st.session_state.t_c = get_total_cost()
+            try:
+                st.session_state.t_c = get_total_cost()
+            except:
+                st.session_state.t_c = 0
             if st.session_state.t_c > 50:
                 st.error("🚨 No credits remaining.")
             else:
