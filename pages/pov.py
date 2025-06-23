@@ -7,6 +7,9 @@ from pages.openai_utils import just_img
 st.title("POV Renders")
 
 with st.expander("Overview"):
+    st.info(
+        "⚠️ For better results: Indicate the intended render perspective by drawing a red arrow on the sketch."
+    )
     st.markdown("""
 - **Overview**  
     - Generate one photorealistic point-of-view render from a user-supplied top-down architectural site sketch.
@@ -29,7 +32,6 @@ with st.expander("Overview"):
     - Strictly photorealistic (no filters, text, watermarks, or stylized effects).
     - Returns a single image with no descriptive text or metadata.
     """)
-
 st.info("💡 Ensure you download any images you like before refreshing the page.")
 st.divider()
 
