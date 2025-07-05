@@ -14,7 +14,7 @@ if submitted:
                 st.session_state.t_c = get_total_cost()
             except:
                 st.session_state.t_c = 0
-            if st.session_state.t_c > 50:
+            if st.session_state.t_c > 80:
                 st.error("🚨 No credits remaining.")
             else:
                 st.session_state.logged_in = True
